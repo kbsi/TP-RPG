@@ -16,6 +16,15 @@ class TestPerson(unittest.TestCase):
 
         self.assertEqual(9, defender.get_hp())
 
+    def test_attack_twice_less_2_hp(self):
+        attacker = Person()
+        defender = Person()
+
+        attacker.attack(defender)
+        attacker.attack(defender)
+
+        self.assertEqual(8, defender.get_hp())
+
 
 if __name__ == '__main__':
     unittest.main()
