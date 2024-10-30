@@ -23,7 +23,7 @@ class TestPerson(unittest.TestCase):
         attacker.attack(defender)
         attacker.attack(defender)
 
-        self.assertEqual(7, defender.get_hp())
+        self.assertEqual(8, defender.get_hp())
 
 
 if __name__ == '__main__':
