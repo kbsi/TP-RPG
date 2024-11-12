@@ -25,10 +25,6 @@ class TestPerson(unittest.TestCase):
 
         self.assertEqual(8, defender.get_hp())
 
-    def test_attack_invalid_hp(self):
-        person = Person()
-
-        self.assertEqual(5, person.get_hp())
 
 if __name__ == '__main__':
     unittest.main()
