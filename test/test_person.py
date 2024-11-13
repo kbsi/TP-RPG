@@ -6,7 +6,7 @@ class TestPerson(unittest.TestCase):
     def test_10_hp_init(self):
         person = Person()
 
-        self.assertEqual(9, person.get_hp())
+        self.assertEqual(10, person.get_hp())
 
     def test_attack_less_1_hp(self):
         attacker = Person()
