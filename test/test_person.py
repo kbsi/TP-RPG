@@ -32,8 +32,9 @@ class TestPerson(unittest.TestCase):
         for _ in range(11):
             attacker.attack(defender)
 
-        self.assertTrue(defender.is_dead)
         self.assertEqual(0, defender.get_hp())
+        self.assertTrue(defender.is_dead)
+
 
 if __name__ == '__main__':
     unittest.main()
