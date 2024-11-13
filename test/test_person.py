@@ -25,6 +25,16 @@ class TestPerson(unittest.TestCase):
 
         self.assertEqual(8, defender.get_hp())
 
+    def test_person_is_dead_at_zero_hp(self):
+        attacker = Person()
+        defender = Person()
+
+        for _ in range(11):
+            attacker.attack(defender)
+
+        self.assertEqual(0, defender.get_hp())
+        self.assertTrue(defender.is_dead)
+
 
 if __name__ == '__main__':
     unittest.main()
