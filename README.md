@@ -40,11 +40,7 @@ pipenv run python3 -m unittest discover -s test
 
 We will be using **GitHub Actions** for our CI tool.
 
-- GitHub Actions is a continuous integration and continuous deployment (CI/CD) tool that automates your **build, test, and deployment workflows** right within your GitHub repository.
-- GitHub Actions is **free** for public repositories, and **starts at $5/month** for private repositories.
-- GitHub Actions is **tightly integrated with GitHub**, which makes it easy to use and manage.
-- GitHub Actions is **highly customizable**, which makes it suitable for a wide range of use cases.
-- GitHub Actions also supports a wide range of languages and frameworks, including **Python**.
+GitHub Actions is a CI/CD solution built into GitHub, perfect for automating tests and deployments directly from the repository. Its main advantages include seamless integration, customizable workflows, and free minutes for public repositories. However, limitations include high costs for heavy usage, restricted resources on GitHub-hosted runners, and limited debugging capabilities. It’s ideal for GitHub projects, but complex pipelines may benefit from more flexible CI/CD tools.
 
 ## Our CI/CD pipeline with GitHub Actions
 
