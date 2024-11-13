@@ -35,6 +35,18 @@ class TestPerson(unittest.TestCase):
         self.assertEqual(0, defender.get_hp())
         self.assertTrue(defender.is_dead)
 
+    def test_resurect_person(self):
+        attacker = Person()
+        defender = Person()
+
+        for _ in range(11):
+            attacker.attack(defender)
+
+        defender.resurect()
+
+        self.assertEqual(10, defender.get_hp())
+        self.assertFalse(defender.is_dead)
+
 
 if __name__ == '__main__':
     unittest.main()

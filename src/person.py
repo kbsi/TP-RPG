@@ -15,3 +15,7 @@ class Person:
         if self.__live <= 0:
             self.__live = 0
             self.is_dead = True
+
+    def resurect(self):
+        self.__live = 10
+        self.is_dead = False
