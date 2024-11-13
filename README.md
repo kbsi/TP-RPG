@@ -40,7 +40,9 @@ pipenv run python3 -m unittest discover -s test
 
 We will be using **GitHub Actions** for our CI tool.
 
-GitHub Actions is a CI/CD solution built into GitHub, perfect for automating tests and deployments directly from the repository. Its main advantages include seamless integration, customizable workflows, and free minutes for public repositories. However, limitations include high costs for heavy usage, restricted resources on GitHub-hosted runners, and limited debugging capabilities. It’s ideal for GitHub projects, but complex pipelines may benefit from more flexible CI/CD tools.
+It is free for standard GitHub-hosted runners in public repositories. There is a timeout of 6 hours for a job, but it should never happen in our case.
+However, limitations include high costs for heavy usage, restricted resources on GitHub-hosted runners, and limited debugging capabilities. Except for the last point, we're not concerned by these limitations.
+It’s ideal for GitHub projects, but complex pipelines may benefit from more flexible CI/CD tools. Additionally, GitHub Actions has a large community, which can be very helpful for finding solutions and getting support.
 
 ## Our CI/CD pipeline with GitHub Actions
 
