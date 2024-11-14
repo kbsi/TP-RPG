@@ -30,7 +30,7 @@ class TestPerson(unittest.TestCase):
         attacker = Person()
         defender = Person()
 
-        for _ in range(11):
+        for _ in range(10):
             attacker.attack(defender)
 
         self.assertEqual(0, defender.get_hp())
@@ -51,7 +51,6 @@ class TestPerson(unittest.TestCase):
     def test_attack_with_gun(self):
         attacker = Person()
         defender = Person()
-        knife = Knife()
         gun = Gun()
     
         initial_hp = defender.get_hp()
