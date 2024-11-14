@@ -8,13 +8,13 @@ class Person:
         return self.__live
 
     def attack(self, defender):
-        defender.__live -= 1
-        defender.check_if_dead()
-
+        if defender.__live > 0:
+            defender.__live -= 1
+        else:
+            defender.is_dead = True
+ 
     def check_if_dead(self):
-        if self.__live <= 0:
-            self.__live = 0
-            self.is_dead = True
+        return self.is_dead
 
     def resurect(self):
         self.__live = 10
