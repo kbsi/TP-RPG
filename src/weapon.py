@@ -8,7 +8,7 @@ class Weapon:
 
 class Knife(Weapon):
     def __init__(self):
-        super().__init__(damage=1)
+        super().__init__(damage=2)
 
 
 class Gun(Weapon):
