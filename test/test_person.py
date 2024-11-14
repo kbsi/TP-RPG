@@ -52,10 +52,19 @@ class TestPerson(unittest.TestCase):
         attacker = Person()
         defender = Person()
         gun = Gun()
-    
+
         initial_hp = defender.get_hp()
         attacker.attack(defender, gun)
         self.assertEqual(defender.get_hp(), initial_hp - gun.damage)
+
+    def test_attack_person_with_armor(self):
+        attacker = Person()
+        defender_with_armor = Person(with_armor=True)
+
+        attacker.attack(defender_with_armor)
+        # armor should reduce damage by 1
+        self.assertEqual(10, defender_with_armor.get_hp())
+
 
 if __name__ == '__main__':
     unittest.main()
