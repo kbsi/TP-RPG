@@ -1,5 +1,6 @@
 import unittest
 from src.person import Person
+from src.weapon import Knife, Gun
 
 
 class TestPerson(unittest.TestCase):
@@ -29,7 +30,7 @@ class TestPerson(unittest.TestCase):
         attacker = Person()
         defender = Person()
 
-        for _ in range(11):
+        for _ in range(10):
             attacker.attack(defender)
 
         self.assertEqual(0, defender.get_hp())
@@ -39,7 +40,7 @@ class TestPerson(unittest.TestCase):
         attacker = Person()
         defender = Person()
 
-        for _ in range(11):
+        for _ in range(10):
             attacker.attack(defender)
 
         defender.resurect()
@@ -47,6 +48,14 @@ class TestPerson(unittest.TestCase):
         self.assertEqual(10, defender.get_hp())
         self.assertFalse(defender.is_dead)
 
+    def test_attack_with_gun(self):
+        attacker = Person()
+        defender = Person()
+        gun = Gun()
+    
+        initial_hp = defender.get_hp()
+        attacker.attack(defender, gun)
+        self.assertEqual(defender.get_hp(), initial_hp - gun.damage)
 
 if __name__ == '__main__':
     unittest.main()

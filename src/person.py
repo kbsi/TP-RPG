@@ -1,3 +1,5 @@
+from .weapon import Weapon
+
 class Person:
 
     def __init__(self):
@@ -7,11 +9,15 @@ class Person:
     def get_hp(self):
         return self.__live
 
-    def attack(self, defender):
+    def attack(self, defender, weapon = None):
+        damage = weapon.damage if weapon else 1
+
         if defender.__live > 0:
-            defender.__live -= 1
-        else:
-            defender.is_dead = True
+            defender.__live -= damage
+
+            if defender.__live <= 0:
+                defender.is_dead = True
+                defender.__live = 0
  
     def check_if_dead(self):
         return self.is_dead
