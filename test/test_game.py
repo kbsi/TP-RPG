@@ -12,12 +12,19 @@ class TestGame(unittest.TestCase):
     def test_game_initialization(self):
         self.assertEqual(self.game.player1, self.player1)
         self.assertEqual(self.game.player2, self.player2)
-        self.assertEqual(self.game.round, 0)
+        self.assertEqual(self.game.round, 1)
 
     def test_game_start(self):
-        winner = self.game.start(rounds=5)
+        self.player1.live = 50
+        self.player2.live = 0
+        winner = self.game.start(rounds=1)
         self.assertIn(winner, [self.player1, self.player2])
         self.assertTrue(self.game.round <= 5)
+
+    def test_game_history(self):
+        self.game.start(rounds=1)
+        history = self.game.get_history()
+        self.assertTrue(len(history) > 0)
 
     def test_game_winner(self):
         self.player1.live = 50

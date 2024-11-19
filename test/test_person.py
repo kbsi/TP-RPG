@@ -9,6 +9,11 @@ class TestPerson(unittest.TestCase):
 
         self.assertEqual(10, person.get_hp())
 
+    def test_str_name(self):
+        person = Person("John")
+
+        self.assertEqual("John", str(person))
+
     def test_attack_less_1_hp(self):
         attacker = Person()
         defender = Person()
