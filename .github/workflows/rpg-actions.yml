@@ -40,9 +40,8 @@ jobs:
 
       - name: Test with unittest
         run: |
-          pipenv shell
-          coverage run python3 -m unittest discover -s test
-          coverage report
+          pipenv run coverage run python3 -m unittest discover -s test
+          pipenv run coverage report
 
   merge-to-master:
     runs-on: ubuntu-latest
