@@ -40,7 +40,7 @@ jobs:
 
       - name: Test with unittest
         run: |
-          run pipenv shell
+          pipenv shell
           coverage run python3 -m unittest discover -s test
           coverage report
 
