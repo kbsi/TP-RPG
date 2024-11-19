@@ -5,10 +5,11 @@ class Person:
     __armor_power = 1
     __initial_hp = 10
 
-    def __init__(self, with_armor=False):
+    def __init__(self, name="", with_armor=False):
         self.live = Person.__initial_hp
         self.is_dead = False
         self.armor = with_armor
+        self.name = name
 
     def get_hp(self):
         return self.live
@@ -32,3 +33,6 @@ class Person:
     def resurect(self):
         self.live = Person.__initial_hp
         self.is_dead = False
+
+    def __str__(self) -> str:
+        return self.name
