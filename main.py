@@ -1,6 +1,6 @@
 
-from src.game import Game
-from src.person import Person
+from controller.game import Game
+from model.person import Person
 
 
 player1 = Person("Player 1", with_armor=True)

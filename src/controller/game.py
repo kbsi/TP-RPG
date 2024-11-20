@@ -1,5 +1,5 @@
-from src.person import Person
-from src.weapon import Gun, Knife
+from model.person import Person
+from model.weapon import Gun, Knife
 import random
 
 
