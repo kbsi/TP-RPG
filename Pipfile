@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 coverage = "*"
+pytest = "*"
+pytest-cov = "*"
+distlib = "*"
+filelock = "*"
+mutmut = "*"
 
 [dev-packages]
 
