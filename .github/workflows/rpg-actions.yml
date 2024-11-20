@@ -39,9 +39,8 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
       - name: Test with pytest
-        env:
-          PYTHONPATH: ${{ github.workspace }}/src
         run: |
+          export PYTHONPATH=$(pwd)/src
           pipenv run pytest --cov=src --cov-report=term-missing --cov-fail-under=80
 
       - name: Run mutation tests with mutmut
